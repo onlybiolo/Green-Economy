@@ -1,0 +1,67 @@
+{
+  "version": 2,
+  "dgSpecHash": "Pk7GkbEgTJM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Biolo\\.nuget\\packages\\harfbuzzsharp\\8.3.1.1\\harfbuzzsharp.8.3.1.1.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\8.3.1.1\\harfbuzzsharp.nativeassets.linux.8.3.1.1.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\harfbuzzsharp.nativeassets.macos\\8.3.1.1\\harfbuzzsharp.nativeassets.macos.8.3.1.1.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\harfbuzzsharp.nativeassets.win32\\8.3.1.1\\harfbuzzsharp.nativeassets.win32.8.3.1.1.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\litedb\\5.0.21\\litedb.5.0.21.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\livechartscore\\2.0.0\\livechartscore.2.0.0.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\livechartscore.skiasharpview\\2.0.0\\livechartscore.skiasharpview.2.0.0.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\livechartscore.skiasharpview.winforms\\2.0.0\\livechartscore.skiasharpview.winforms.2.0.0.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\microsoft.web.webview2\\1.0.2420.47\\microsoft.web.webview2.1.0.2420.47.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\newtonsoft.json\\13.0.4\\newtonsoft.json.13.0.4.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\opentk\\3.1.0\\opentk.3.1.0.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\opentk.glcontrol\\3.1.0\\opentk.glcontrol.3.1.0.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\scottplot\\5.1.58\\scottplot.5.1.58.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\scottplot.winforms\\5.1.58\\scottplot.winforms.5.1.58.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\skiasharp\\3.119.0\\skiasharp.3.119.0.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\skiasharp.harfbuzz\\3.119.0\\skiasharp.harfbuzz.3.119.0.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\skiasharp.nativeassets.linux.nodependencies\\3.119.0\\skiasharp.nativeassets.linux.nodependencies.3.119.0.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\skiasharp.nativeassets.macos\\3.119.0\\skiasharp.nativeassets.macos.3.119.0.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\skiasharp.nativeassets.win32\\3.119.0\\skiasharp.nativeassets.win32.3.119.0.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\skiasharp.views.desktop.common\\3.119.0\\skiasharp.views.desktop.common.3.119.0.nupkg.sha512",
+    "C:\\Users\\Biolo\\.nuget\\packages\\skiasharp.views.windowsforms\\3.119.0\\skiasharp.views.windowsforms.3.119.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Il pacchetto 'OpenTK 3.1.0' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net10.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
+      "projectPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+      "libraryId": "OpenTK",
+      "targetGraphs": [
+        "net10.0-windows"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Il pacchetto 'OpenTK.GLControl 3.1.0' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net10.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
+      "projectPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+      "libraryId": "OpenTK.GLControl",
+      "targetGraphs": [
+        "net10.0-windows"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "message": "Il pacchetto 'SkiaSharp.Views.WindowsForms 3.119.0' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net10.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
+      "projectPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+      "warningLevel": 1,
+      "filePath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+      "libraryId": "SkiaSharp.Views.WindowsForms",
+      "targetGraphs": [
+        "net10.0-windows"
+      ]
+    }
+  ]
+}

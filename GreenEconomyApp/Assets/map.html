@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Green Economy Map</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        body { padding: 0; margin: 0; background-color: #202020; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        html, body, #map { height: 100%; width: 100vw; }
+        .leaflet-container { background: #202020; }
+        
+        /* Tema Scuro per i Popup */
+        .custom-popup .leaflet-popup-content-wrapper { background-color: #333; color: #fff; border-radius: 8px; border: 1px solid #555; }
+        .custom-popup .leaflet-popup-tip { background-color: #333; }
+        
+        /* Spinner CSS Puro per feedback visivo istantaneo del C# in background */
+        .loader {
+            border: 4px solid #444; border-top: 4px solid #00d2b4; border-radius: 50%;
+            width: 40px; height: 40px;
+            animation: spin 1s linear infinite;
+            position: absolute; top: 15px; left: 50%; margin-left: -20px;
+            z-index: 1000; box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            display: none;
+        }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    </style>
+</head>
+<body>
+    <div id="loader" class="loader"></div>
+    <div id="map"></div>
+    
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map', {
+            center: [41.9, 12.5],
+            zoom: 3, minZoom: 2, maxZoom: 18, zoomControl: true
+        });
+
+        // Mappa CartoDB Dark ottimale per UI scure
+        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+            attribution: '&copy; OpenStreetMap &copy; CARTO',
+            subdomains: 'abcd', maxZoom: 20
+        }).addTo(map);
+
+        // Click Event: Comunicazione Verso C# (WebView2 Interop)
+        map.on('click', function(e) {
+            document.getElementById('loader').style.display = 'block'; // Mostra il caricamento subitissimo all'utente
+            var payload = { type: 'coords', lat: e.latlng.lat, lng: e.latlng.lng };
+            window.chrome.webview.postMessage(JSON.stringify(payload));
+        });
+
+        var markers = [];
+        window.addMarker = function(lat, lng, color, popupHtml, doFly) {
+            document.getElementById('loader').style.display = 'none'; // Nascondi caricamento
+            
+            var fillColor = color === 'green' ? '#2ecc71' : (color === 'yellow' ? '#f1c40f' : '#e74c3c');
+            
+            var circle = L.circleMarker([lat, lng], {
+                radius: 12, fillColor: fillColor, color: '#fff', weight: 2, opacity: 1, fillOpacity: 0.8
+            }).addTo(map);
+
+            circle.bindPopup(popupHtml, { className: 'custom-popup' }).openPopup();
+            markers.push(circle);
+            if (doFly !== false) map.flyTo([lat, lng], map.getZoom() < 8 ? 8 : map.getZoom(), { animate: true, duration: 1.0 });
+        };
+
+        window.clearMarkers = function() {
+            for(var i=0; i<markers.length; i++) {
+                map.removeLayer(markers[i]);
+            }
+            markers = [];
+        };
+        
+        window.hideLoader = function() { document.getElementById('loader').style.display = 'none'; }
+
+        window.addEventListener('load', function() {
+            // Notifica C# che la mappa è pronta ad accettare JS e stampiamo lo storico pin
+            if(window.chrome && window.chrome.webview) {
+                window.chrome.webview.postMessage(JSON.stringify({ type: 'ready', lat: 0, lng: 0 }));
+            }
+        });
+    </script>
+</body>
+</html>
