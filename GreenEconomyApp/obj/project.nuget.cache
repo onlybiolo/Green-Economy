@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Pk7GkbEgTJM=",
+  "dgSpecHash": "IkDxvvq7rSM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+  "projectFilePath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\Green-Economy\\GreenEconomyApp\\GreenEconomyApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Biolo\\.nuget\\packages\\harfbuzzsharp\\8.3.1.1\\harfbuzzsharp.8.3.1.1.nupkg.sha512",
     "C:\\Users\\Biolo\\.nuget\\packages\\harfbuzzsharp.nativeassets.linux\\8.3.1.1\\harfbuzzsharp.nativeassets.linux.8.3.1.1.nupkg.sha512",
@@ -31,9 +31,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Il pacchetto 'OpenTK 3.1.0' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net10.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
-      "projectPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+      "projectPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\Green-Economy\\GreenEconomyApp\\GreenEconomyApp.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+      "filePath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\Green-Economy\\GreenEconomyApp\\GreenEconomyApp.csproj",
       "libraryId": "OpenTK",
       "targetGraphs": [
         "net10.0-windows"
@@ -43,9 +43,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Il pacchetto 'OpenTK.GLControl 3.1.0' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net10.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
-      "projectPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+      "projectPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\Green-Economy\\GreenEconomyApp\\GreenEconomyApp.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+      "filePath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\Green-Economy\\GreenEconomyApp\\GreenEconomyApp.csproj",
       "libraryId": "OpenTK.GLControl",
       "targetGraphs": [
         "net10.0-windows"
@@ -55,9 +55,9 @@
       "code": "NU1701",
       "level": "Warning",
       "message": "Il pacchetto 'SkiaSharp.Views.WindowsForms 3.119.0' è stato ripristinato mediante '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' e non mediante il framework di destinazione del progetto 'net10.0-windows7.0'. Questo pacchetto potrebbe non essere completamente compatibile con il progetto.",
-      "projectPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+      "projectPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\Green-Economy\\GreenEconomyApp\\GreenEconomyApp.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+      "filePath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\Green-Economy\\GreenEconomyApp\\GreenEconomyApp.csproj",
       "libraryId": "SkiaSharp.Views.WindowsForms",
       "targetGraphs": [
         "net10.0-windows"

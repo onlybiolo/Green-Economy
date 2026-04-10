@@ -17,17 +17,11 @@ namespace GreenEconomyApp;
 
 public partial class Form1 : Form
 {
-    // ──────────────────────────────────────────────
-    //  Controlli UI — Welcome Screen
-    // ──────────────────────────────────────────────
     private Button btnEntra        = null!;
     private Button btnImpostazioni = null!;
     private Button btnChiudi       = null!;
     private PictureBox backgroundGif = null!;
 
-    // ──────────────────────────────────────────────
-    //  Controlli UI — Dashboard
-    // ──────────────────────────────────────────────
     private Panel pnlDashboard = null!;
     private Button btnTabMappa = null!;
     private Button btnTabAnalisi = null!;
@@ -40,27 +34,29 @@ public partial class Form1 : Form
     private Panel pnlAnalisi = null!;
     private Panel pnlDati = null!;
 
-    // Mappa
     private WebView2 mapControl = null!;
 
-    // Analisi
     private CartesianChart chartCorrelazione = null!;
     private CartesianChart chartPollutanti = null!;
     private PieChart chartDistribuzione = null!;
     private Label lblStatistiche = null!;
 
-    // Tabella Dati
     private DataGridView dgvDati = null!;
 
-    // Font condivisi (evita ricreazione ad ogni Paint)
     private readonly Font _fontTitolo = new("Segoe UI", 58, FontStyle.Bold);
     private readonly Font _fontSotto = new("Segoe UI", 13, FontStyle.Italic);
 
-
-
-    // ══════════════════════════════════════════════
-    //  COSTRUTTORE
-    // ══════════════════════════════════════════════
+    // Trasforma le sigle tecniche delle API (es. p2, o3) in nomi leggibili per l'utente
+    private string FormatPollutantName(string code) => code.ToLower() switch
+    {
+        "p2" => "PM2.5",
+        "p1" => "PM10",
+        "o3" => "Ozono (O3)",
+        "n2" => "Biossido Azoto (NO2)",
+        "s2" => "Anidride Solforosa (SO2)",
+        "co" => "Monossido Carbonio (CO)",
+        _ => code.ToUpper()
+    };
 
     public Form1()
     {
@@ -527,30 +523,28 @@ public partial class Form1 : Form
     private async Task RefreshDataGridAsync()
     {
         dgvDati.Rows.Clear();
-        dgvDati.Rows.Add(Lang.Get("caricamento") ?? "Caricamento storico...", "", "", "", "", "", "");
-
-        var imp = FormImpostazioni.CaricaImpostazioni();
-        string[] referenceCities = { "Roma", "Parigi", "Londra", "New York", "Pechino" };
-
-        var records = await WeatherAirService.Instance.GetHistoricalDataAsync(referenceCities, imp.ApiKey);
         
-        dgvDati.Rows.Clear();
+        using var db = new LiteDatabase(AppConstants.DbPath);
+        var records = db.GetCollection<GreenEconomyRecord>(AppConstants.DbCollectionName)
+                        .FindAll()
+                        .OrderByDescending(x => x.Timestamp)
+                        .ToList();
         
         if (records.Count == 0)
         {
-             dgvDati.Rows.Add("Nessun dato storico trovato (Controlla API Key)", "", "", "", "", "", "");
+             dgvDati.Rows.Add(Lang.Get("stats_no_data") ?? "Nessun dato trovato nel database.", "", "", "", "", "", "");
              return;
         }
 
         foreach (var r in records)
         {
             dgvDati.Rows.Add(
-                r.Timestamp.ToString("dd/MM/yyyy"),
+                r.Timestamp.ToString("dd/MM/yyyy HH:mm"),
                 r.City,
                 r.Region,
                 r.Temperature.ToString("F1"),
                 r.AQI,
-                r.MainPollutant,
+                FormatPollutantName(r.MainPollutant),
                 r.TrendInfo
             );
         }
@@ -613,7 +607,7 @@ public partial class Form1 : Form
             {
                 new Axis
                 {
-                    Labels = pollutants.Select(p => p.Name).ToArray(),
+                    Labels = pollutants.Select(p => FormatPollutantName(p.Name)).ToArray(),
                     LabelsPaint = new LiveChartsCore.SkiaSharpView.Painting.SolidColorPaint(SkiaSharp.SKColors.LightGray),
                     TextSize = 14
                 }

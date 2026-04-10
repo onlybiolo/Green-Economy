@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GreenEconomyApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a91db1f3d370c17e05f877c8a2f46233e3b5e2c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("GreenEconomyApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GreenEconomyApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

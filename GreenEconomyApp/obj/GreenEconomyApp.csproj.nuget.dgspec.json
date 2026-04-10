@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj": {}
+    "C:\\Users\\Biolo\\Documents\\greeneconomy\\Green-Economy\\GreenEconomyApp\\GreenEconomyApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj": {
+    "C:\\Users\\Biolo\\Documents\\greeneconomy\\Green-Economy\\GreenEconomyApp\\GreenEconomyApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+        "projectUniqueName": "C:\\Users\\Biolo\\Documents\\greeneconomy\\Green-Economy\\GreenEconomyApp\\GreenEconomyApp.csproj",
         "projectName": "GreenEconomyApp",
-        "projectPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\GreenEconomyApp.csproj",
+        "projectPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\Green-Economy\\GreenEconomyApp\\GreenEconomyApp.csproj",
         "packagesPath": "C:\\Users\\Biolo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\GreenEconomyApp\\obj\\",
+        "outputPath": "C:\\Users\\Biolo\\Documents\\greeneconomy\\Green-Economy\\GreenEconomyApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Biolo\\AppData\\Roaming\\NuGet\\NuGet.Config"
